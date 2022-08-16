@@ -1,12 +1,16 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import { trpc } from '../utils/trpc'
 
 const Home: NextPage = () => {
   const router = useRouter()
-  router.push('/yaml')
   const hello = trpc.useQuery(['example.hello', { text: 'from tRPC' }])
+
+  useEffect(() => {
+    router.push('/yaml')
+  }, [])
 
   return (
     <>

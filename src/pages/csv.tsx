@@ -43,7 +43,7 @@ const CSVEditor: React.FC<{
         ></textarea>
         <div
           className="inset-0 pointer-events-none bg-transparent whitespace-pre-wrap font-mono tracking-normal border border-transparent"
-          type="text"
+          {...{ type: 'text' }}
           style={{ gridArea: '1 / 1 / 2 / 2', font: 'inherit' }}
         >
           {props.value.split('\n').map((line, i) => {
