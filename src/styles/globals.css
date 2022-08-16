@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-mid rounded-md
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  @apply bg-brand-middark
+}
+
+html, body {
+  @apply bg-brand-dark
+}
